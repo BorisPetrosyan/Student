@@ -14,11 +14,8 @@ export class createFacultyFormComponent extends Component {
 
     init() {
 
-
         this.$el.lastElementChild.firstElementChild.addEventListener('click', submitHandler.bind(this))
         this.$el.lastElementChild.lastElementChild.addEventListener('click', clickHandler.bind(this))
-
-
         this.form = new Form(this.$el, {
             faculty_name: [Validators.required]
         })
