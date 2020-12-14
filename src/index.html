@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>student</title>
+
+    <!-- Icons font CSS-->
+    <!-- <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all"> -->
+    <!-- <link href="src/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all"> -->
+    <!-- Font special for pages-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- Main CSS-->
+    <!-- <link href="css/main.css" rel="stylesheet" media="all"> -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+        <div class="nav-wraper">
+            <ul class="tabs" id="navigation">
+                <li><a class="tab activee" href="#" data-name="dashboard_list">Dashboard</a></li>
+                <li><a class="tab" href="#" data-name="Faculty_list">Faculties</a></li>
+                <li><a class="tab" href="#" data-name="Group_list">Groups</a></li>
+                <li><a class="tab" href="#" data-name="Student_list">Students</a></li>
+            </ul>
+        </div>
+        <div class="wrapper wrapper--w680">
+            <div class="loader-wrap hide" id="loader">
+                <div class="lds-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div id="dashboard_list" class="card card-4 faded">
+                <table id="live-search-content" class="table_studnets_list">
+                    <tr class="th_banner colorSearch">
+                        <th class="Studnet_name_style">Name<input type="text" id="MyInput" class="myInput" placeholder=" Search Name" title="Type in a name"> </th>
+                        <th class="Studnet_LastName_style">Last Name<input type="text" id="MyInput2" class="myInput" placeholder=" Search Last Name" title="Type in a name"></th>
+                        <th class="Studnet_mail_style">email <input id="MyInput3" type="text" class="myInput" placeholder=" Search Email" title="Type in a name"></th>
+                        <th class="Studnet_mail_style">phone<input id="MyInput4" type="text" class="myInput" placeholder=" Search Phone" title="Type in a name"></th>
+                        <th class="Studnet_facultyy_style">Faculty<span class="hide" id="load"></span><br><select id="selectfacultyS">
+                                <br>
+                                <option value="Choose faculty" disabled="disabled" selected="selected">Choose faculty
+                                </option>
+                            </select></th>
+
+
+                        <th class="Studnet_facultyy_style">Group<span class="hide" id="loadGroup"></span>
+                            <br> <select id="selectgroupS"><br>
+                                <option value="Choose group" disabled="disabled" selected="selected">Choose group
+                                </option>
+                            </select></th>
+                    </tr>
+
+                    <tbody class="bodyfor"></tbody>
+                </table>
+
+                <div class="no_students"></div>
+                <div class="loader-wrap hide" id="loader">
+                    <div class="lds-ripple">
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="Faculty_list" class="card card-4 hide faded">
+                <button class="button1" style="vertical-align:middle"><span>Create Faculty </span></button>
+                <table class="table_Faculty_list">
+                    <tr class="th_banner">
+                        <th class="gr_id">ID</th>
+                        <th class="gr_name">Name</th>
+                    </tr>
+                </table>
+                <div class="no_students"></div>
+            </div>
+            <div id="Group_list" class="card card-4 hide faded">
+                <button class="button2" style="vertical-align:middle" data-name="Create Group"><span>Create Group
+                    </span></button>
+                <table class="table_groups_create">
+                    <tr class="th_banner">
+                        <th class="gr_id">ID</th>
+                        <th class="gr_name2">Name</th>
+                        <th class="gr_fac">Fuculty</th>
+                    </tr>
+                </table>
+                <div class="no_students"></div>
+            </div>
+            <div id="Student_list" class="card card-4 hide faded">
+                <button class="button1" style="vertical-align:middle"><span>Create Student </span></button>
+
+                <table class="table_studnets_list">
+                    <tr class="th_banner">
+                        <th class="Studnet_id_style">ID</th>
+                        <th class="Studnet_name_style">Name</th>
+                        <th class="Studnet_LastName_style">Last Name</th>
+                        <th class="Studnet_mail_style">email</th>
+                        <th class="Studnet_mail_style">phone</th>
+                        <th class="Studnet_Group_style">Faculty</th>
+                        <th class="Studnet_facultyy_style">Group</th>
+                    </tr>
+                </table>
+                <div class="no_students"></div>
+            </div>
+            <div id="Create_Student" class="card card-4 hide faded">
+                <div class="card-body">
+                    <h2 class="title">Create Student</h2>
+                    <form id='Create_form'>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">first name</label>
+                                    <input class="input--style-4" type="text" name="first_name">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">last name</label>
+                                    <input class="input--style-4" type="text" name="last_name">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Email</label>
+                                    <input class="input--style-4" type="email" name="email">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label>
+                                    <input class="input--style-4" type="number" name="phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group forFacultyError">
+                                    <label class="label ">Faculty</label>
+                                    <div class="rs-select2 js-select-simple select--no-search ">
+
+                                        <select name="Faculty" class="select_fac3">
+                                            <option value="Choose option" disabled="disabled" selected="selected">Choose
+                                                faculty</option>
+                                        </select>
+
+                                        <div class="select-dropdown"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="group-show" class="faded row row-space hide">
+                            <div class="col-2">
+                                <div class="input-group forGroupError">
+                                    <label class="label">Group</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="Group" class="select_fac2">
+                                            <option value="Choose option" disabled="disabled" selected="selected">Choose
+                                                group</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                            </div>
+                        </div>
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Create</button>
+                            <button class="btn btn--radius-2 btn--red">cancel</button>
+                        </div>
+                    </form>
+                    <span class="hide" id="loadGroup3"></span>
+                    <span class="hide" id="loadGroup2"></span>
+                </div>
+            </div>
+            <div id="Create_Group" class="card card-4 hide faded">
+                <div class="card-body">
+                    <h2 class="title">Create Group</h2>
+                    <form id="Create_group_form">
+                        <div class="row row-space ">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Group</label>
+                                    <input class="input--style-4" type="text" name="group_name">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group forGroupError">
+                                    <label class="label">faculty</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select class="select_fac" name="faculty">
+                                            <option disabled="disabled" selected="selected"></option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-t-15">
+                            <button class="btn btn--radius-2 btn--blue" type="submit" value="Submit">save</button>
+                            <button class="btn btn--radius-2 btn--red">cancel</button>
+                        </div>
+                    </form>
+                    <span class="hide" id="loadGroup3"></span>
+                </div>
+            </div>
+            <div id="Create_Faculty" class="card card-4 hide faded">
+                <div class="card-body">
+                    <h2 class="title">Create Faculty</h2>
+                    <form id='Create_faculty_form'>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <label class="label">Faculty</label>
+                                    <input class="input--style-4" type="text" name="faculty_name">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="p-t-15">
+
+                            <button class="btn btn--radius-2 btn--blue" type="submit" name="action" value="Update">save</button>
+                            <button class="btn btn--radius-2 btn--red" type="submit" name="action2" value="Delete">cancel</button>
+
+                        </div>
+
+                    </form>
+                    <span class="hide" id="loadGroup3"></span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

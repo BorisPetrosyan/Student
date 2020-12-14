@@ -1,0 +1,40 @@
+{
+    "name": "js-native-blog",
+    "version": "1.0.0",
+    "description": "js native blog",
+    "main": "index.js",
+    "scripts": {
+        "build": "webpack --mode production",
+        "dev": "webpack --mode development",
+        "start": "webpack-dev-server --mode development --open"
+    },
+    "keywords": [
+        "js",
+        "blog",
+        "javascript"
+    ],
+    "author": "Vladilen Mini",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.2.3",
+        "babel-loader": "^8.0.4",
+        "file-loader": "^6.1.0",
+        "html-loader": "^1.3.0",
+        "html-webpack-plugin": "^4.4.1",
+        "webpack": "^4.28.2",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.14"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.2.5",
+        "css-vendor": "^2.0.8",
+        "firebase": "^7.20.0",
+        "jquery": "^3.5.1",
+        "material-design-iconic-font": "^2.2.0",
+        "select2": "^4.0.13",
+        "svg": "^0.1.0",
+        "vendors": "^1.0.4"
+    }
+}
